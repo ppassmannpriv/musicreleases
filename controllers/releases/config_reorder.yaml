@@ -1,0 +1,4 @@
+title: Releases
+modelClass: Papa\Musicreleases\Models\Release
+toolbar:
+    buttons: reorder_toolbar

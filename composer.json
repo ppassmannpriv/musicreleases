@@ -1,0 +1,28 @@
+{
+    "name": "papa/musicreleases",
+    "type": "october-plugin",
+    "description": "Musicreleases OctoberCMS plugin",
+    "keywords": ["october", "cms", "musicreleases", "plugin"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pieter Passmann",
+            "email": "hello@pieterpassmann.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Papa\\Musicreleases\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

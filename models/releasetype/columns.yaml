@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: 'papa.musicreleases::lang.releasetype.name'
+        type: text
+        searchable: true
+        sortable: true
+    base_url:
+        label: 'papa.musicreleases::lang.release.url'
+        type: text
+        searchable: true
+        sortable: true

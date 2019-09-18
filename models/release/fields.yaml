@@ -1,0 +1,26 @@
+fields:
+    artist:
+        label: 'papa.musicreleases::lang.release.artist'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    title:
+        label: 'papa.musicreleases::lang.release.title'
+        span: auto
+        type: text
+    type:
+        label: 'papa.musicreleases::lang.release.type'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    image:
+        label: 'papa.musicreleases::lang.release.image'
+        mode: file
+        span: auto
+        type: mediafinder
+    url:
+        label: 'papa.musicreleases::lang.release.url'
+        span: auto
+        type: text

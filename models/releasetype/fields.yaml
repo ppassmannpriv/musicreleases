@@ -1,0 +1,13 @@
+fields:
+    code:
+        label: 'papa.musicreleases::lang.releasetype.code'
+        span: auto
+        type: text
+    name:
+        label: 'papa.musicreleases::lang.releasetype.name'
+        span: auto
+        type: text
+    base_url:
+        label: 'papa.musicreleases::lang.releasetype.base_url'
+        span: auto
+        type: text

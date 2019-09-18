@@ -1,0 +1,10 @@
+name: Artists
+form: $/papa/musicreleases/models/artist/fields.yaml
+modelClass: Papa\Musicreleases\Models\Artist
+defaultRedirect: papa/musicreleases/artists
+create:
+    redirect: 'papa/musicreleases/artists/update/:id'
+    redirectClose: papa/musicreleases/artists
+update:
+    redirect: papa/musicreleases/artists
+    redirectClose: papa/musicreleases/artists

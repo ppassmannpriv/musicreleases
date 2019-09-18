@@ -1,0 +1,16 @@
+columns:
+    name:
+        label: 'papa.musicreleases::lang.artist.name'
+        type: text
+        searchable: true
+        sortable: true
+    firstname:
+        label: 'papa.musicreleases::lang.artist.firstname'
+        type: text
+        searchable: true
+        sortable: true
+    lastname:
+        label: 'papa.musicreleases::lang.artist.lastname'
+        type: text
+        searchable: true
+        sortable: true

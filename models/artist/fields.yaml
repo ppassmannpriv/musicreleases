@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: 'papa.musicreleases::lang.artist.name'
+        span: auto
+        type: text
+    firstname:
+        label: 'papa.musicreleases::lang.artist.firstname'
+        span: auto
+        type: text
+    lastname:
+        label: 'papa.musicreleases::lang.artist.lastname'
+        span: auto
+        type: text

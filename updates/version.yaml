@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table papa_musicreleases_releasetypes'
+    - builder_table_create_papa_musicreleases_releasetypes.php
+1.0.3:
+    - 'Created table papa_musicreleases_releases'
+    - builder_table_create_papa_musicreleases_releases.php
+1.0.4:
+    - 'Created table papa_musicreleases_artists'
+    - builder_table_create_papa_musicreleases_artists.php
+1.0.5:
+    - 'Updated table papa_musicreleases_releasetypes'
+    - builder_table_update_papa_musicreleases_releasetypes.php
+1.0.6:
+    - 'Updated table papa_musicreleases_releases'
+    - builder_table_update_papa_musicreleases_releases.php

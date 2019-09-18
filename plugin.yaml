@@ -1,0 +1,24 @@
+plugin:
+    name: 'papa.musicreleases::lang.plugin.name'
+    description: 'papa.musicreleases::lang.plugin.description'
+    author: 'Pieter Passmann'
+    icon: oc-icon-music
+    homepage: 'http://pieterpassmann.dev'
+navigation:
+    musicreleases:
+        label: 'papa.musicreleases::lang.plugin.name'
+        url: papa/musicreleases/releases
+        icon: icon-music
+        sideMenu:
+            releases:
+                label: 'papa.musicreleases::lang.releases'
+                url: papa/musicreleases/releases
+                icon: icon-th-list
+            releasetypes:
+                label: 'papa.musicreleases::lang.releasetypes'
+                url: papa/musicreleases/releasetypes
+                icon: icon-square
+            artists:
+                label: 'papa.musicreleases::lang.artists'
+                url: papa/musicreleases/artists
+                icon: icon-users

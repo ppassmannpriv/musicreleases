@@ -1,0 +1,11 @@
+name: Releasetypes
+modelClass: Papa\Musicreleases\Models\Releasetype
+form: $/papa/musicreleases/models/releasetype/fields.yaml
+defaultRedirect: papa/musicreleases/releasetypes
+create:
+    redirect: 'papa/musicreleases/releasetypes/update/:id'
+    redirectClose: papa/musicreleases/releasetypes
+update:
+    redirect: papa/musicreleases/releasetypes
+    redirectClose: papa/musicreleases/releasetypes
+preview: {  }

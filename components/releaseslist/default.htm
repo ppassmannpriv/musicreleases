@@ -1,0 +1,29 @@
+{% set records = __SELF__.records %}
+{% set recordClassName = __SELF__.recordClassName %}
+{% set displayColumn = __SELF__.displayColumn %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+
+    {% for record in records %}
+        <div class="{{ recordClassName }}">
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+                {% elseif record.url %}
+                    <a href="{{ record.url }}" data-title='{{ record.title }}' data-artist='{{ record.getArtist() }}'>
+                {% endif %}
+                
+                <img src='{{ record.image|media }}' alt='{{ record.getArtist() }} - {{ record.title }}' />
+
+                {% if detailsPage %}
+                    </a>
+                {% elseif record.url %}
+                    </a>
+                {% endif %}
+            {% endspaceless %}
+        </div>
+    {% else %}
+        <div class="no-data">{{ noRecordsMessage }}</div>
+    {% endfor %}
