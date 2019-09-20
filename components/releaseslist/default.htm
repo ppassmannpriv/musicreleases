@@ -5,24 +5,28 @@
 {% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
 {% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
 
-    {% for record in records %}
-        <div class="{{ recordClassName }}">
-            {# Use spaceless tag to remove spaces inside the A tag. #}
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
-                {% elseif record.url %}
-                    <a href="{{ record.url }}" data-title='{{ record.title }}' data-artist='{{ record.getArtist() }}'>
-                {% endif %}
-                
-                <img src='{{ record.image|media }}' alt='{{ record.getArtist() }} - {{ record.title }}' />
+    {% for recordsBatch in records|batch(3) %}
+        <div class="columns is-mobile">
+            {% for record in recordsBatch %}
+                <div class="{{ recordClassName }} column is-4">
+                    {# Use spaceless tag to remove spaces inside the A tag. #}
+                    {% spaceless %}
+                        {% if detailsPage %}
+                            <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+                        {% elseif record.url %}
+                            <a href="{{ record.url }}" data-title='{{ record.title }}' data-artist='{{ record.getArtist() }}' title='{{ record.getArtist() }} - {{ record.title }}'>
+                        {% endif %}
+                        
+                        <img width="450" src='{{ record.image|media }}' alt='{{ record.getArtist() }} - {{ record.title }}' />
 
-                {% if detailsPage %}
-                    </a>
-                {% elseif record.url %}
-                    </a>
-                {% endif %}
-            {% endspaceless %}
+                        {% if detailsPage %}
+                            </a>
+                        {% elseif record.url %}
+                            </a>
+                        {% endif %}
+                    {% endspaceless %}
+                </div>
+            {% endfor %}
         </div>
     {% else %}
         <div class="no-data">{{ noRecordsMessage }}</div>
